@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+         https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>SaludBoyacá</display-name>
+
+    <!-- Página de bienvenida -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Servlets -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>sena.adso.saludboyaca.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>sena.adso.saludboyaca.servlet.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OTPServlet</servlet-name>
+        <servlet-class>sena.adso.saludboyaca.servlet.OTPServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OTPServlet</servlet-name>
+        <url-pattern>/otp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DashboardServlet</servlet-name>
+        <servlet-class>sena.adso.saludboyaca.servlet.DashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DashboardServlet</servlet-name>
+        <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CitaServlet</servlet-name>
+        <servlet-class>sena.adso.saludboyaca.servlet.CitaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CitaServlet</servlet-name>
+        <url-pattern>/citas</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PacienteServlet</servlet-name>
+        <servlet-class>sena.adso.saludboyaca.servlet.PacienteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PacienteServlet</servlet-name>
+        <url-pattern>/pacientes</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HorarioServlet</servlet-name>
+        <servlet-class>sena.adso.saludboyaca.servlet.HorarioServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HorarioServlet</servlet-name>
+        <url-pattern>/horarios</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ConsultaServlet</servlet-name>
+        <servlet-class>sena.adso.saludboyaca.servlet.ConsultaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ConsultaServlet</servlet-name>
+        <url-pattern>/consulta-cita</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CaptchaServlet</servlet-name>
+        <servlet-class>sena.adso.saludboyaca.servlet.CaptchaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CaptchaServlet</servlet-name>
+        <url-pattern>/captcha-img</url-pattern>
+    </servlet-mapping>
+
+    <!-- Páginas de error -->
+    <error-page>
+        <error-code>403</error-code>
+        <location>/WEB-INF/views/error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/views/error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/views/error.jsp</location>
+    </error-page>
+
+</web-app>
